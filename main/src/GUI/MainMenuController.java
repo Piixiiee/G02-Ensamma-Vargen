@@ -1,3 +1,5 @@
+package GUI;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,7 +9,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-import javax.swing.*;
 import java.util.Objects;
 
 public class MainMenuController{

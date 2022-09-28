@@ -7,13 +7,13 @@
 <?import javafx.scene.layout.Pane?>
 
 
-<AnchorPane prefHeight="512.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewGameController">
+<AnchorPane prefHeight="512.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.NewGameController">
    <children>
       <Pane prefHeight="512.0" prefWidth="640.0">
          <children>
             <ImageView fitHeight="512.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/newgamebg.png" />
+                  <Image url="@../images/newgamebg.png" />
                </image>
             </ImageView>
             <Button fx:id="ExitButton" layoutX="585.0" layoutY="14.0" mnemonicParsing="false" onAction="#pressedExitButton" text="Back" />

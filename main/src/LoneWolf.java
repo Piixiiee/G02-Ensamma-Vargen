@@ -5,14 +5,13 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-import java.io.FileInputStream;
 import java.util.Objects;
 
 public class LoneWolf extends Application{
 
    @Override
    public void start(Stage stage) throws Exception {
-       Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("MainMenu.fxml")));
+       Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("GUI/MainMenu.fxml")));
        Scene scene = new Scene(root);
        stage.setTitle("Lone Wolf");
        Image icon = new Image("images/lonewolflogo.png");
@@ -26,7 +25,7 @@ public class LoneWolf extends Application{
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             @Override
             public void run() {
-                Model.getInstance().shutDown();
+                // Model.getInstance().shutDown();
             }
         }));
     }

@@ -1,3 +1,5 @@
+package GUI;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,7 +9,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.util.Objects;
 
 public class AboutPageController extends AnchorPane {
