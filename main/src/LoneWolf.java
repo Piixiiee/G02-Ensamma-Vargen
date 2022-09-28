@@ -21,12 +21,20 @@ public class LoneWolf extends Application{
        stage.show();
    }
     public static void main(String[] args) {
-        launch(args);
+        /* launch(args);
+
+
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             @Override
             public void run() {
-                // Model.getInstance().shutDown();
+                Model.getInstance().shutDown();
+
             }
-        }));
+        })); */
+
+        /*
+        This method is only for playing in the terminal, comment out if not wanted
+         */
+        Controller.startTerminalGame();
     }
 }

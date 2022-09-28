@@ -1,5 +1,8 @@
+import Entities.Player;
+
 public class Model {
-    /* private static Model instance = null;
+    private static Model instance = null;
+    public static Player player;
 
     public static Model getInstance(){
         if (instance == null) {
@@ -13,7 +16,7 @@ public class Model {
     }
     public void shutDown(){
 
-    } */
+    }
 
 
 }
