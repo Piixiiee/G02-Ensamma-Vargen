@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import java.util.Objects;
 
 public class NewGameController {
+    private Model model = new Model();
 
     @FXML
     private TextFlow TextBox;
@@ -19,12 +20,19 @@ public class NewGameController {
     private ImageView GameImage, Cross;
 
     @FXML
-    private Button ChoiceButton1, ChoiceButton2, ChoiceButton3, ChoiceButton4, ExitButton;
+    private Button ChoiceButton1, ChoiceButton2, ChoiceButton3, ChoiceButton4, ExitButton, WarriorButton, HunterButton;
 
     public void pressedExitButton() throws Exception{
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("MainMenu.fxml")));
         Stage aboutStage = (Stage) ExitButton.getScene().getWindow();
         aboutStage.setScene(new Scene(root));
+    }
+
+    public void createHunterController(){
+        model.createHunterFromButton();
+    }
+    public void createWarriorController(){
+        model.createWarriorFromButton();
     }
 
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="512.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Users/hind-/Downloads/1550214163_A_painting_of_a_pine_forest_path_during_night__horror__scary__extreme_horror__Edgar_Allan_Poe__spooky__in_the_style_of_Alfred_Bierstadt_and_Rembrandt__in_4K.png" />
+         </image>
+      </ImageView>
+      <TextArea layoutX="220.0" layoutY="35.0" opacity="0.53" prefHeight="90.0" prefWidth="200.0" text="Hello ">
+         <font>
+            <Font name="Viner Hand ITC" size="30.0" />
+         </font>
+      </TextArea>
+      <TextArea layoutX="194.0" layoutY="147.0" opacity="0.53" prefHeight="61.0" prefWidth="252.0" text="Your adventure starts now!">
+         <font>
+            <Font name="Viner Hand ITC" size="17.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>
