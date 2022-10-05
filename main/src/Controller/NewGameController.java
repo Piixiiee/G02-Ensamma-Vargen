@@ -27,7 +27,6 @@ public class NewGameController {
     private Button ChoiceButton1, ChoiceButton2, ChoiceButton3, ChoiceButton4, ExitButton;
 
     public void initialize() {
-        event = new Choice();
         textBox.setText(event.getEventText());
     }
 
