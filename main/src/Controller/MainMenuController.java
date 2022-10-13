@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Model;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -32,9 +33,10 @@ public class MainMenuController{
                 aboutStage.setScene(new Scene(root));
         }
         public void pressedNewGamePageButton() throws Exception{
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/NewGame.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("View/NewGame.fxml")));
                 Stage aboutStage = (Stage) mainmenuNewGameButton.getScene().getWindow();
                 aboutStage.setScene(new Scene(root));
+                Model.getInstance().selectAction(0);
         }
 
 }

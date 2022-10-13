@@ -27,8 +27,7 @@ public class LoneWolf extends Application{
 
     public static void main(String[] args) {
         //only to instantiate the model. replace with actual player and event when starting a new game/continuing old save
-        Event emptyLaunchEventGUI = EventParser.parse("assets/AllEvents/emptyLaunchEventGUI.xml");
-        Model model = new Model(new Player(1,1,1,"launchInstance"), emptyLaunchEventGUI);
+        Model model = Model.getInstance();
         launch(args);
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             @Override

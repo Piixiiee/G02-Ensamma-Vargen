@@ -17,7 +17,11 @@
                </image>
             </ImageView>
             <Button fx:id="ExitButton" layoutX="585.0" layoutY="14.0" mnemonicParsing="false" onAction="#pressedExitButton" text="Back" />
-            <TextArea fx:id="textBox" layoutX="149.0" layoutY="90.0" opacity="0.49" prefHeight="83.0" prefWidth="343.0" />
+            <TextArea fx:id="textBox" layoutX="148.0" layoutY="57.0" opacity="0.49" prefHeight="171.0" prefWidth="343.0" />
+            <Button fx:id="ChoiceButton1" layoutX="294.0" layoutY="271.0" mnemonicParsing="false" onAction="#pressedChoiceButton1" text="Button" />
+            <Button fx:id="ChoiceButton2" layoutX="293.0" layoutY="322.0" mnemonicParsing="false" onAction="#pressedChoiceButton2" text="Button" />
+            <Button fx:id="ChoiceButton3" layoutX="293.0" layoutY="367.0" mnemonicParsing="false" onAction="#pressedChoiceButton3" text="Button" />
+            <Button fx:id="ChoiceButton4" layoutX="293.0" layoutY="416.0" mnemonicParsing="false" onAction="#pressedChoiceButton4" text="Button" />
          </children>
       </Pane>
    </children>

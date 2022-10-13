@@ -4,7 +4,7 @@
         TEXT
     </text>
     <actions>
-        <choice name=" VAL1" nexteventfile="assets/AllEvents/VAL1.xml">
+        <choice name=" VAL1" nexteventfile="assets/AllEvents/testBattle.xml">
             <effect />
         </choice>
         <choice name=" VAL2" nexteventfile="assets/AllEvents/VAL2.xml">

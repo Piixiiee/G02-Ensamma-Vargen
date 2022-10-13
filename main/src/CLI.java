@@ -18,8 +18,7 @@ public class CLI {
         //Console cons = System.console();
         Scanner scanner = new Scanner(System.in);
 
-        Event startEvent = EventParser.parse("assets/AllEvents/startEvent.xml");
-        Model model = new Model(new Player(2, 8, 1, "Vargis"), startEvent);
+        Model model = Model.getInstance("assets/AllEvents/startEvent.xml");
         scanner.nextLine();
         int keyPressed;
         boolean restart = false;
@@ -27,8 +26,7 @@ public class CLI {
         while (true)
         {
             if(restart){
-                startEvent = EventParser.parse("assets/AllEvents/startEvent.xml");
-                model = new Model(new Player(2, 8, 1, "Vargis"), startEvent);
+                model = Model.getInstance("assets/AllEvents/startEvent.xml");
                 restart = false;
             }
             Event currentEvent = model.getCurrentEvent();

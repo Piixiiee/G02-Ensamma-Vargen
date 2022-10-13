@@ -3,6 +3,7 @@ package Model;
 import Model.Entities.CharacterState;
 import Model.Entities.Player;
 import Model.Events.Event;
+import Model.Events.EventParser;
 import Model.Interfaces.IAction;
 import Model.Interfaces.util.IObservable;
 import Model.Interfaces.util.IObserver;
@@ -11,13 +12,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Model implements IObserver<IAction>, IObservable<Event> {
+    private static Model model;
     //private static Model instance = null;
     private final List<IObserver<Event>> observers;
-    private final Player player;
+    private Player player;
     private Event currentEvent;
 
-    public Model(Player player, Event firstEvent){
-        this.player = player;
+    private Model(Event firstEvent){
+
         this.observers = new ArrayList<>();
         this.currentEvent = firstEvent;
         currentEvent.subscribe(this);
@@ -67,6 +69,16 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
     public Event getCurrentEvent()
     {
         return currentEvent;
+    }
+
+    public static Model getInstance() {
+        return getInstance("assets/AllEvents/emptyLaunchEventGUI.xml");
+    }
+    public static Model getInstance(String eventPath) {
+        if (model == null) {
+            model = new Model(EventParser.parse(eventPath));
+        }
+        return model;
     }
 
 }
