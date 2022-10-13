@@ -18,7 +18,7 @@ public class CLI {
         //Console cons = System.console();
         Scanner scanner = new Scanner(System.in);
 
-        Model model = Model.getInstance("assets/AllEvents/startEvent.xml");
+        Model model = Model.getInstance();
         scanner.nextLine();
         int keyPressed;
         boolean restart = false;
@@ -26,7 +26,7 @@ public class CLI {
         while (true)
         {
             if(restart){
-                model = Model.getInstance("assets/AllEvents/startEvent.xml");
+                model.restart();
                 restart = false;
             }
             Event currentEvent = model.getCurrentEvent();

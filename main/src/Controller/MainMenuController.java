@@ -36,7 +36,6 @@ public class MainMenuController{
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("View/NewGame.fxml")));
                 Stage aboutStage = (Stage) mainmenuNewGameButton.getScene().getWindow();
                 aboutStage.setScene(new Scene(root));
-                Model.getInstance().selectAction(0);
         }
 
 }

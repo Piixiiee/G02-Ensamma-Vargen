@@ -3,6 +3,7 @@ package Model.Events;
 import Model.Entities.Creature;
 import Model.Events.Actions.Battle;
 import Model.Events.Actions.Choice;
+import Model.Events.Actions.SelectCharacter;
 import Model.Factories.CreatureFactory;
 import Model.Interfaces.IAction;
 import Model.Interfaces.IEffect;
@@ -51,10 +52,31 @@ public class EventParser {
             switch (currentChildNode.getNodeName()) {
                 case "text":  eventText = parseTextNode(currentChildNode); break;
                 case "actions": eventActions = parseActionsNode(currentChildNode); break;
+                case "selectcharacter": eventActions = parseSelectCharacter(currentChildNode); break;
             }
         }
         return new Event(eventText, eventActions);
     }
+
+    private static List<IAction> parseSelectCharacter(Node selectCharacterNode) {
+        String path = selectCharacterNode.getAttributes().getNamedItem("nexteventfile").getNodeValue();
+        List<IAction> eventActions = new ArrayList<>();
+        NodeList actionsChildren = selectCharacterNode.getChildNodes();
+
+        for (int i = 0; i < actionsChildren.getLength(); i++) {
+            Node currentNode = actionsChildren.item(i);
+            if (currentNode.getNodeName().equals("character")) {
+                NamedNodeMap attributes = currentNode.getAttributes();
+                String name = attributes.getNamedItem("name").getNodeValue();
+                int strength = Integer.parseInt(attributes.getNamedItem("strength").getNodeValue());
+                int armor = Integer.parseInt(attributes.getNamedItem("armor").getNodeValue());
+                int health = Integer.parseInt(attributes.getNamedItem("health").getNodeValue());
+                eventActions.add(new SelectCharacter(path, name, strength, health, armor));
+            }
+        }
+        return eventActions;
+    }
+
     private static List<IAction> parseActionsNode(Node actionsNode) {
         List<IAction> eventActions = new ArrayList<>();
         NodeList actionsChildren = actionsNode.getChildNodes();

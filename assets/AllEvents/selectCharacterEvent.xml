@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<event>
+    <text>
+        Pick a character for your future adventure
+    </text>
+    <selectcharacter nexteventfile="assets/AllEvents/startEvent.xml">
+        <character name="Hunter" strength="5" health="10" armor="2" />
+        <character name="Warrior" strength="8" health="5" armor="3" />
+    </selectcharacter>
+</event>

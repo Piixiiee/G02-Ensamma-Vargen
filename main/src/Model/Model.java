@@ -15,11 +15,11 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
     private static Model model;
     //private static Model instance = null;
     private final List<IObserver<Event>> observers;
-    private Player player;
+    private final Player player;
     private Event currentEvent;
 
     private Model(Event firstEvent){
-
+        player = new Player(0, 0,0, "temp");
         this.observers = new ArrayList<>();
         this.currentEvent = firstEvent;
         currentEvent.subscribe(this);
@@ -72,13 +72,13 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
     }
 
     public static Model getInstance() {
-        return getInstance("assets/AllEvents/emptyLaunchEventGUI.xml");
-    }
-    public static Model getInstance(String eventPath) {
         if (model == null) {
-            model = new Model(EventParser.parse(eventPath));
+            model = new Model(EventParser.parse("assets/AllEvents/selectCharacterEvent.xml"));
         }
         return model;
     }
 
+    public void restart() {
+        // TODO: Implement
+    }
 }

@@ -5,20 +5,20 @@ import Model.Interfaces.ICharacter;
 //Parent class to all the alive beings in the game
 //All alive beings have a name, strength, armor and health value, both max and current
 public class ACharacter implements ICharacter {
-        String Name;
-        double Strength;
+        String name;
+        double strength;
         double maxHealth;
         double currentHealth;
-        double Armor;
+        double armor;
         CharacterState state;
 
         public ACharacter(double Strength, double Health, String Name, double Armor)
         {
-                this.Strength = Strength;
+                this.strength = Strength;
                 this.maxHealth = Health;
                 this.currentHealth = Health;
-                this.Name = Name;
-                this.Armor = Armor;
+                this.name = Name;
+                this.armor = Armor;
                 this.state = CharacterState.ALIVE;
 
 
@@ -50,7 +50,7 @@ public class ACharacter implements ICharacter {
         //Getters for all attributes for characters
         public double getStrength()
         {
-                return this.Strength;
+                return this.strength;
         }
         public double getmaxHealth()
         {
@@ -62,11 +62,11 @@ public class ACharacter implements ICharacter {
         }
         public String getName()
         {
-                return this.Name;
+                return this.name;
         }
         public double getArmor()
         {
-                return this.Armor;
+                return this.armor;
         }
 
 }

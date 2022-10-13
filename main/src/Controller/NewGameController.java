@@ -56,7 +56,6 @@ public class NewGameController implements IObserver<Event> {
 
     public void initialize() {
         Model.getInstance().subscribe(this);
-        System.out.println("AAAAAAHH");
     }
 
     public void pressedExitButton() throws Exception{
@@ -70,9 +69,11 @@ public class NewGameController implements IObserver<Event> {
     }
     public void pressedChoiceButton2() {
         Model.getInstance().selectAction(1);
-    }public void pressedChoiceButton3() {
+    }
+    public void pressedChoiceButton3() {
         Model.getInstance().selectAction(2);
-    }public void pressedChoiceButton4() {
+    }
+    public void pressedChoiceButton4() {
         Model.getInstance().selectAction(3);
     }
 }
