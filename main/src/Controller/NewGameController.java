@@ -16,6 +16,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
@@ -34,6 +35,8 @@ public class NewGameController implements Initializable {
     private String selectedClassString = "";
     private String selectedNameString = "";
 
+    @FXML
+    private AnchorPane mainPane;
     @FXML
     private TextFlow createCharacter;
     @FXML
@@ -94,12 +97,17 @@ public class NewGameController implements Initializable {
         }
         System.out.println(gameModel.getPlayerStrength());
         System.out.println(gameModel.getPlayerArmour());
-        startGameView(gameModel);
+        Model.gameModel = gameModel;
+        startGameView();
     }
-    public void startGameView(Model gameModel) throws Exception{
+    public void startGameView() throws Exception{
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/GameView.fxml")));
         Stage aboutStage = (Stage) ExitButton.getScene().getWindow();
         aboutStage.setScene(new Scene(root));
+        /* GameViewController gameViewController = new GameViewController(gameModel);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/GameView.fxml"));
+        loader.setController(gameViewController);
+        mainPane = loader.load(); */
     }
 
     private void setContinueWarning(String warning){

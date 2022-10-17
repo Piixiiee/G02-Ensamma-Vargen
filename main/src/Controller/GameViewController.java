@@ -11,6 +11,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -19,11 +21,15 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class GameViewController implements IObserver<Event>, Initializable {
-    Model gameModel;
+
     NewGameController parentController;
+
+    public GameViewController(Model gameModel){
+
+    }
     @Override
     public void update(Event event) {
-        textBox.setText(event.getEventText());
+        //textBox.setText(event.getEventText());
         if (event.getAmountOfActions() >= 1) {
             ChoiceButton1.setVisible(true);
             ChoiceButton1.setText(event.getActionText(0));
@@ -51,20 +57,23 @@ public class GameViewController implements IObserver<Event>, Initializable {
     }
 
     @FXML
-    private TextArea textBox;
+    private TextFlow eventPrompt;
 
     @FXML
-    private ImageView GameImage, Cross;
+    private ImageView gameViewBG, Cross;
 
     @FXML
     private Button ChoiceButton1, ChoiceButton2, ChoiceButton3, ChoiceButton4, ExitButton;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //Model.getInstance().subscribe(this);
+        //Model.gameModel.subscribe(this);
 
-        gameModel = parentController.getGameModel();
-        gameModel.subscribe(this);
+        //gameModel = parentController.getGameModel();
+       // gameModel.subscribe(this);
+        Model.gameModel.subscribe(this);
+        Text eventText = new Text(Model.gameModel.getCurrentEvent().getEventText());
+        eventPrompt.getChildren().add(eventText);
     }
 
     public void pressedExitButton() throws Exception{
