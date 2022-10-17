@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainPane" prefHeight="512.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.NewGameController">
+<AnchorPane prefHeight="512.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.NewGameController">
    <children>
       <StackPane fx:id="createYourOwnClass" layoutX="222.0" layoutY="282.0" prefHeight="120.0" prefWidth="200.0">
          <children>

@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class GameViewController implements IObserver<Event>, Initializable {
+public class GameViewController implements IObserver<Event> {
 
     NewGameController parentController;
 
@@ -65,15 +65,14 @@ public class GameViewController implements IObserver<Event>, Initializable {
     @FXML
     private Button ChoiceButton1, ChoiceButton2, ChoiceButton3, ChoiceButton4, ExitButton;
 
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize() {
         //Model.gameModel.subscribe(this);
 
         //gameModel = parentController.getGameModel();
        // gameModel.subscribe(this);
-        Model.gameModel.subscribe(this);
-        Text eventText = new Text(Model.gameModel.getCurrentEvent().getEventText());
-        eventPrompt.getChildren().add(eventText);
+        //Model.gameModel.subscribe(this);
+        //Text eventText = new Text(Model.gameModel.getCurrentEvent().getEventText());
+        //eventPrompt.getChildren().add(eventText);
     }
 
     public void pressedExitButton() throws Exception{

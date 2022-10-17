@@ -101,7 +101,10 @@ public class NewGameController implements Initializable {
         startGameView();
     }
     public void startGameView() throws Exception{
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/GameView.fxml")));
+        var resource = getClass().getResource("../View/GameView.fxml");
+        var nonNullObjects = Objects.requireNonNull(resource);
+        Parent root = FXMLLoader.load(nonNullObjects);
+        //Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/GameView.fxml")));
         Stage aboutStage = (Stage) ExitButton.getScene().getWindow();
         aboutStage.setScene(new Scene(root));
         /* GameViewController gameViewController = new GameViewController(gameModel);
