@@ -130,7 +130,7 @@ public class NewGameController implements Initializable {
      * @throws Exception if the game screen cannot be loaded
      */
     public void startGameView(Model gameModel) throws Exception{
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/GameView.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/GameView.fxml")));
         Stage aboutStage = (Stage) ExitButton.getScene().getWindow();
         aboutStage.setScene(new Scene(root));
     }
@@ -174,7 +174,7 @@ public class NewGameController implements Initializable {
      * exitButton(), connected to the exit button, closes the stage
      */
     public void pressedExitButton() throws Exception{
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/MainMenu.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/MainMenu.fxml")));
         Stage aboutStage = (Stage) ExitButton.getScene().getWindow();
         aboutStage.setScene(new Scene(root));
     }

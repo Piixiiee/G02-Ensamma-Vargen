@@ -28,7 +28,7 @@ public class AboutPageController extends AnchorPane {
          * method to load the main menu page, called when the back button is pressed
          */
         public void pressedAboutPageBackButton() throws Exception{
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/MainMenu.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/MainMenu.fxml")));
                 Stage aboutStage = (Stage) aboutPageBackButton.getScene().getWindow();
                 aboutStage.setScene(new Scene(root));
         }

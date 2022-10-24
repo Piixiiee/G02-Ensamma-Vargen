@@ -32,7 +32,7 @@ public class MainMenuController{
          * method to load the about page, called when the about button is pressed
          */
         public void pressedAboutPageButton() throws Exception{
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/AboutPage.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/AboutPage.fxml")));
                 Stage aboutStage = (Stage) mainmenuAboutPageButton.getScene().getWindow();
                 aboutStage.setScene(new Scene(root));
         }
@@ -41,7 +41,7 @@ public class MainMenuController{
          * method to load the new game page, called when the new game button is pressed
          */
         public void pressedNewGamePageButton() throws Exception{
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/NewGame.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/NewGame.fxml")));
                 Stage aboutStage = (Stage) mainmenuNewGameButton.getScene().getWindow();
                 aboutStage.setScene(new Scene(root));
         }

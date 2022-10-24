@@ -111,7 +111,7 @@ public class GameViewController implements IObserver<Event>, Initializable {
      * returns to the main menu when back button is pressed
      */
     public void pressedExitButton() throws Exception{
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/MainMenu.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/MainMenu.fxml")));
         Stage aboutStage = (Stage) ExitButton.getScene().getWindow();
         aboutStage.setScene(new Scene(root));
     }
