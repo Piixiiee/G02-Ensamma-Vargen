@@ -17,6 +17,7 @@ Model\Interfaces\util\IObservable.class
 Model\Factories\CreatureFactory.class
 Model\Events\Actions\Choice.class
 Controller\NewGameController.class
+Main.class
 Model\Entities\Creature.class
 Model\Events\Actions\Battle.class
 Model\Interfaces\ICharacter.class
