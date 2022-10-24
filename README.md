@@ -18,7 +18,13 @@ Build package using Maven:
 
     mvn package
     
-### Running
+## Running
 In project root:
 
+### Linux and macOS
+
     java -jar ./target/G02-Ensamma-Vargen-1.0.jar
+    
+### Windows
+
+    java -jar .\target\G02-Ensamma-Vargen-1.0.jar
