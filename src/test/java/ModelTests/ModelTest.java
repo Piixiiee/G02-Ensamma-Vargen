@@ -9,7 +9,7 @@ import static Model.Model.getInstance;
 import static Model.Model.setGameModel;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ModelTests {
+public class ModelTest {
     Player testPlayer1 = new Player(2,2,2, "Stocken");
     Player testPlayer2 = new Player(3,3,3, "Pixie");
     Event testEvent1 = Event.getEvent("/xml/TestEvent1.xml");

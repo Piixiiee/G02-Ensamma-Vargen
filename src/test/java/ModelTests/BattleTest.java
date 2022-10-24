@@ -6,7 +6,7 @@ import Model.Events.Actions.Battle;
 import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class BattleTests {
+public class BattleTest {
         Player testPlayer1 = new Player(4,3,2, "Stocken");
         Creature testMonsterStrong = new Creature(true, 6,6,"Orc", 6);
         Creature testMonsterWeak = new Creature(true, 1,1,"Rabbit", 1);

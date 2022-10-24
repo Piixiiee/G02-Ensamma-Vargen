@@ -1,4 +1,5 @@
-package Model.Events;
+package EventTests;
+import Model.Events.Event;
 import Model.Interfaces.IAction;
 import Model.Interfaces.util.IObserver;
 import org.junit.Test;
