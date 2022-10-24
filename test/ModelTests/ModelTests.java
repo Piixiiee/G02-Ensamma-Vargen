@@ -11,8 +11,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ModelTests {
     Player testPlayer1 = new Player(2,2,2, "Stocken");
-    Event testEvent1 = Event.getEvent("assets/AllEvents/TestEvent1.xml");
+    Player testPlayer2 = new Player(3,3,3, "Pixie");
+    Event testEvent1 = Event.getEvent("/xml/TestEvent1.xml");
     Model testModel = new Model(testPlayer1, testEvent1);
+    Model testModel2 = new Model(testPlayer2, testEvent1);
 
 
     @Test
@@ -20,7 +22,12 @@ public class ModelTests {
         setGameModel(testModel);
         assertEquals(testModel, getInstance());
     }
-
+    @Test
+    public void testSetModel(){
+        assertEquals(getInstance().getPlayerName(), "Stocken");
+        setGameModel(testModel2);
+        assertEquals(getInstance().getPlayerName(), "Pixie");
+    }
     @Test
     public void testGetPlayerStrength(){
         assertEquals(2, testModel.getPlayerStrength());

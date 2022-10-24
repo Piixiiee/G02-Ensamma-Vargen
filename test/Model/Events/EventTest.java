@@ -6,16 +6,19 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class EventTest {
+    Event testEvent = Event.getEvent("/xml/TestEvent1.xml");
 
     @Test
     public void selectActionTest(){
-    Event testEvent = Event.getEvent("assets/AllEvents/TestEvent1.xml");
     TestObserver<IAction> hej = new TestObserver<>();
     testEvent.subscribe(hej);
     testEvent.selectAction(0);
     assertEquals(hej.getReceived().getActionName(), testEvent.getActions().get(0).getActionName());
     }
-
+    @Test
+    public void testGetPathToThisEvent(){
+        assertEquals(testEvent.getPathToThisEvent(), "/xml/TestEvent1.xml");
+    }
 
 }
 class TestObserver<T> implements IObserver<T> {
