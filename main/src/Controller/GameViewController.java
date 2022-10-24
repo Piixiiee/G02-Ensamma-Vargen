@@ -32,8 +32,6 @@ import java.util.ResourceBundle;
  * Controller for the game screen
  */
 public class GameViewController implements IObserver<Event>, Initializable {
-    private Model gameModel;
-    private NewGameController parentController;
 
     /**
      * all the FXML components of the stage
