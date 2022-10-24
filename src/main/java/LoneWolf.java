@@ -18,7 +18,7 @@ public class LoneWolf extends Application{
      */
    @Override
    public void start(Stage stage) throws Exception {
-       Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("View/MainMenu.fxml")));
+       Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("MainMenu.fxml")));
        Scene scene = new Scene(root);
        stage.setTitle("Lone Wolf");
        Image icon = new Image(System.getProperty("user.dir")+"/assets/images/lonewolflogo.png");

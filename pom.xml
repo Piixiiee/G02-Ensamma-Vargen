@@ -26,11 +26,27 @@
             <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>12.0.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-fxml -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>20-ea+4</version>
+        </dependency>
+
+
+
+
 
     </dependencies>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.source.release>17</maven.compiler.source.release>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
@@ -43,10 +59,17 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <addClasspath>true</addClasspath>
                             <mainClass>LoneWolf</mainClass>
                         </manifest>
                     </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <configuration>
+                    <mainClass>LoneWolf</mainClass>
                 </configuration>
             </plugin>
         </plugins>
