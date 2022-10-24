@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<event img="/images/img01.png">
+    <text>
+        TEXT
+    </text>
+    <actions>
+        <choice name=" VAL1" nexteventfile="/xml/VAL1.xml">
+            <effect name="changehealth" text="A tree falls on you" value="-5"/>
+            <effect name="" condition="str>5" logic="or">
+                <condition expression="class=hunter" />
+                <condition expression="hp<=5" />
+            </effect>
+        </choice>
+        <choice name=" VAL2" nexteventfile="/xml/VAL2.xml">
+            <effect />
+        </choice>
+        <choice name=" VAL3" nexteventfile="/xml/VAL3.xml">
+            <effect />
+        </choice>
+        <choice name=" VAL4" nexteventfile="/xml/VAL4.xml">
+            <effect />
+        </choice>
+    </actions>
+</event>

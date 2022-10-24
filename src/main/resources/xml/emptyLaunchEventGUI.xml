@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<event>
+    <text>
+        TEXT
+    </text>
+    <actions>
+        <choice name=" VAL1" nexteventfile="/xml/VAL1.xml">
+            <effect />
+        </choice>
+        <choice name=" VAL2" nexteventfile="/xml/VAL2.xml">
+            <effect />
+        </choice>
+        <choice name=" VAL3" nexteventfile="/xml/VAL3.xml">
+            <effect />
+        </choice>
+        <choice name=" VAL4" nexteventfile="/xml/VAL4.xml">
+            <effect />
+        </choice>
+    </actions>
+</event>
