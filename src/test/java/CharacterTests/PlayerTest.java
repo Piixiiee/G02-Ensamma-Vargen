@@ -5,7 +5,7 @@ import Model.Factories.PlayerFactory;
 import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class PlayerTests {
+public class PlayerTest {
         Player testPlayer1 = new Player(2,2,2, "Stocken");
         Player testPlayer2 = PlayerFactory.createPlayer(3, 4, 5, "Pixie");
 
