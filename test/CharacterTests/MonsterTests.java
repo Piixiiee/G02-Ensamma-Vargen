@@ -17,5 +17,10 @@ public class MonsterTests
         assertEquals(1, TestRabbit1.getStrength(), 0.01);
 
     }
+    @Test
+    public void testCreateOrc(){
+        Creature TestOrc1 = CreatureFactory.createOrc();
+        assertEquals(4, TestOrc1.getStrength(), 0.01);
+    }
 }
 

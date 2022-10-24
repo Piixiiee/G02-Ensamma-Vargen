@@ -16,7 +16,16 @@ public class PlayerTests {
             assertEquals(2, testPlayer1.getStrength());
             assertEquals(4, testPlayer2.getmaxHealth());
         }
-
+    @Test
+    public void testCreateWarrior(){
+        Player testPlayer3 = PlayerFactory.createWarriorPlayer("Warrior");
+        assertEquals(6, testPlayer3.getStrength());
+    }
+    @Test
+    public void testCreateHunter(){
+        Player testPlayer4 = PlayerFactory.createHunterPlayer("Hunter");
+        assertEquals(3, testPlayer4.getStrength());
+    }
 
 
 
