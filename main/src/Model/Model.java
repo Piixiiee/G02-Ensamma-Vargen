@@ -1,6 +1,5 @@
 package Model;
 
-import Model.Entities.CharacterState;
 import Model.Entities.Player;
 import Model.Events.Event;
 import Model.Interfaces.IAction;

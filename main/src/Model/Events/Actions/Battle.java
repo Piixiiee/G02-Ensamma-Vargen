@@ -1,6 +1,5 @@
 package Model.Events.Actions;
 
-import Model.Entities.CharacterState;
 import Model.Entities.Creature;
 import Model.Entities.Player;
 import Model.Events.Event;

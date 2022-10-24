@@ -1,5 +1,3 @@
-import Model.Events.Event;
-import Model.Events.EventParser;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

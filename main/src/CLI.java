@@ -2,10 +2,8 @@ import Model.Entities.Player;
 import Model.Interfaces.IAction;
 import Model.Model;
 import Model.Events.*;
-import java.io.BufferedReader;
-import java.io.Console;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Scanner;
 

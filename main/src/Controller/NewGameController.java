@@ -1,13 +1,10 @@
 package Controller;
 
-import Model.Entities.Player;
 import Model.Events.Event;
-import Model.Events.EventSuper;
 import Model.Factories.PlayerFactory;
 import Model.Model;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -22,7 +19,6 @@ import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
 import java.net.URL;
-import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 

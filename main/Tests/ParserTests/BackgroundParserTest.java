@@ -1,11 +1,5 @@
 package ParserTests;
 
-import Model.Events.Event;
-import View.BackgroundParser;
-import javafx.scene.layout.Background;
-import org.junit.Test;
-
-import static View.BackgroundParser.ParseBackground;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
