@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<event background="assets/images/darkpath.png">
+<event background="/images/darkpath.png">
     <text>
         You find nothing :(
         Filthy orcsies
 
     </text>
     <actions>
-        <choice name=" Continue your adventure" nexteventfile="assets/AllEvents/Event17.xml">
+        <choice name=" Continue your adventure" nexteventfile="/xml/Event17.xml">
             <effect />
         </choice>
     </actions>

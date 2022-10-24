@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<event background="assets/images/darktrees.png">
+<event background="/images/darktrees.png">
     <text>
         You turn right, because right is right, right?
         You walk for about an hour or two, before the path suddenly gets wider and wider.
@@ -11,10 +11,10 @@
         What would you like to do?
     </text>
     <actions>
-        <choice name=" Go left towards the forest path" nexteventfile="assets/AllEvents/Event3.xml">
+        <choice name=" Go left towards the forest path" nexteventfile="/xml/Event3.xml">
             <effect />
         </choice>
-        <choice name=" Go right towards the endless cobblestone path" nexteventfile="assets/AllEvents/Event10.xml">
+        <choice name=" Go right towards the endless cobblestone path" nexteventfile="/xml/Event10.xml">
             <effect />
         </choice>
     </actions>

@@ -111,11 +111,11 @@ public class NewGameController implements Initializable {
         } else {
             System.out.println(selectedNameString + " is a " + selectedClassString);
             if (selectedClassString.equals("Warrior")) {
-                gameModel = new Model(PlayerFactory.createWarriorPlayer(selectedNameString), Event.getEvent("assets/allEvents/startEvent.xml"));
+                gameModel = new Model(PlayerFactory.createWarriorPlayer(selectedNameString), Event.getEvent("/xml/startEvent.xml"));
             } else if (selectedClassString.equals("Hunter")) {
-                gameModel = new Model(PlayerFactory.createHunterPlayer(selectedNameString), Event.getEvent("assets/allEvents/startEvent.xml"));
+                gameModel = new Model(PlayerFactory.createHunterPlayer(selectedNameString), Event.getEvent("/xml/startEvent.xml"));
             } else {
-                gameModel = new Model(PlayerFactory.createPlayer(strengthSpinner.getValue(), 10, armourSpinner.getValue(), selectedNameString), Event.getEvent("assets/allEvents/startEvent.xml"));
+                gameModel = new Model(PlayerFactory.createPlayer(strengthSpinner.getValue(), 10, armourSpinner.getValue(), selectedNameString), Event.getEvent("/xml/startEvent.xml"));
             }
             System.out.println(gameModel.getPlayerStrength());
             System.out.println(gameModel.getPlayerArmour());

@@ -77,7 +77,7 @@ public class Battle implements IAction {
         if(enemy.getName().equals(" reaper")|playerWon){
             return Event.getEvent(pathToNextEvent);
         } else {
-            return Event.getEvent("assets/AllEvents/deathEvent.xml");
+            return Event.getEvent("/xml/deathEvent.xml");
         }
 
     }

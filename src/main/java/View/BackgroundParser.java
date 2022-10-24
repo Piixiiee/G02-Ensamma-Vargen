@@ -28,7 +28,10 @@ public class BackgroundParser {
             builderFactory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
             DocumentBuilder builder = builderFactory.newDocumentBuilder();
 
-            File file = new File(path);
+            File resources = new File("src/main/resources"); // get the absolute from resources
+            String absPath = resources.getAbsolutePath() + path;
+
+            File file = new File(absPath);
             if (!file.exists()) {
                 throw new FileNotFoundException();
             }
@@ -56,7 +59,7 @@ public class BackgroundParser {
             String pathToImage = eventNodeAttributes.getNamedItem("background").getNodeValue();
             System.out.println(pathToImage);
             return new Background(new BackgroundImage(
-                    new Image( "/" + pathToImage),
+                    new Image( pathToImage),
                     null,
                     null,
                     null,

@@ -4,7 +4,7 @@
         You got killed by an enemy! Better luck next time!
     </text>
     <actions>
-        <choice name=" VAL1" nexteventfile="assets/AllEvents/VAL1.xml">
+        <choice name=" VAL1" nexteventfile="/xml/VAL1.xml">
             <effect />
         </choice>
     </actions>

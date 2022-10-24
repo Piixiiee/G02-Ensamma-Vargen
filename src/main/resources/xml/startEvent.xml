@@ -7,16 +7,16 @@
         Are you even in your village anymore?
     </text>
     <actions>
-        <choice name=" Look around even more where you are right now" nexteventfile="/AllEvents/Event2.xml">
+        <choice name=" Look around even more where you are right now" nexteventfile="/xml/Event2.xml">
             <effect />
         </choice>
-        <choice name=" Go towards the left path" nexteventfile="/AllEvents/Event3.xml">
+        <choice name=" Go towards the left path" nexteventfile="/xml/Event3.xml">
             <effect />
         </choice>
-        <choice name=" Go towards the right path" nexteventfile="/AllEvents/Event4.xml">
+        <choice name=" Go towards the right path" nexteventfile="/xml/Event4.xml">
             <effect />
         </choice>
-        <battle name=" Lay down and continue sleeping" nexteventfile="/AllEvents/Event6.xml">
+        <battle name=" Lay down and continue sleeping" nexteventfile="/xml/Event6.xml">
             <enemy name=" reaper" strength = "9001" armor= "9001" health = "1000" isHostile = "true"/>
         </battle>
     </actions>
